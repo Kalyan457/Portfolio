@@ -1,0 +1,67 @@
+* {box-sizing: border-box}
+body{
+   margin: 0px;
+}
+
+#project1LikeDislike{
+    font-size: 24px;
+}
+
+#project2LikeDislike{
+    font-size: 24px;
+}
+
+.fa {
+    font-size: 54px;
+    cursor: pointer;
+    user-select: none;
+  }
+ 
+
+.fa-thumbs-up{
+    color: green;
+}
+
+.fa-thumbs-down{
+    color: red;
+}
+
+.navbar {
+    width: 100%;
+    background-color:black;
+    overflow: auto;
+    /* position: fixed; */
+}
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 12.48%;
+    text-align: center;
+}
+.navbar a:hover {
+    background-color:rgb(133, 128, 128);
+}
+.navbar a.active {
+    background-color:blue;
+}
+
+h3{
+    padding: 12px;
+    margin: 0px;
+}
+video{
+    width: 90%;
+    margin-left: 30px;
+    height:400px;
+}
+@media screen and (max-width: 500px) {
+   .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+}

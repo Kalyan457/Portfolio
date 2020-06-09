@@ -1,0 +1,95 @@
+* {box-sizing: border-box}
+body{
+    margin: 0px;
+}
+#project1Div,#project3Div{
+    display: flex;
+    flex-direction: row;
+    background-color:lightgray ;
+}
+#project2Div{
+    display: flex;
+    flex-direction: row;
+    background-color:white ;
+}
+#project1Div>div,#project2Div>div,#project3Div>div{
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 45px;
+    font-size: 23px;
+    border-radius: 20px;
+    box-shadow: 5px 10px #888888;
+    width: 40%;
+    margin: 5%;
+}
+.content{
+    text-decoration: none;
+    background-color: black;
+    border-radius: 25px;
+    color: white;
+    padding: 5px 5px;
+}
+
+.content:hover{
+    background-color:salmon;
+}
+.navbar {
+    width: 100%;
+    background-color:black;
+    overflow: auto;
+    position: fixed;
+}
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 14.285%;
+    text-align: center;
+}
+.navbar a:hover {
+    background-color: #000;
+}
+.navbar a.active {
+    background-color:blue;
+}
+@media screen and (max-width: 500px) {
+   .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+}
+
+@media (max-width:600px){
+    #project1Div,#project3Div{
+        display: flex;
+        flex-direction: column;
+        background-color:lightgray ;
+    }
+    #project2Div{
+        display: flex;
+        flex-direction: column;
+        background-color:white ;
+    }
+
+    #project1Div>div,#project2Div>div,#project3Div>div{
+        background-color: #f1f1f1;
+        text-align: center;
+        line-height: 45px;
+        font-size: 23px;
+        border-radius: 20px;
+        box-shadow: 5px 10px #888888;
+        width: 90%;
+        margin: 5%;
+    }
+
+    .navbar {
+        width: 100%;
+        background-color:black;
+        overflow: auto;
+        position: relative;
+    }
+  }

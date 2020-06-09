@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Demos</title>
+    <link rel="stylesheet" href="videoStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#AboutMe">About Me</a>
+        <a href="index.html#Academics">Academics</a>
+        <a href="index.html#WorkEx">Work Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#Hobby">Hobbies</a>
+        <a href="index.html#Contact">Contact</a>
+    </div>
+    <div id="p1">
+        <div id="project1">
+            <h3 id="p1Name">Contact List Application</h3>
+            <video  controls>
+                <source src="contactListApp.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+        </div>
+        <div id="project1LikeDislike">
+            <span id="likeP1">0</span><i onclick="handleLikesP1()" class="fa fa-thumbs-up"></i>
+            <span id="dislikeP1">0</span><i onclick="handleDisLikesP1()" class="fa fa-thumbs-down"></i>
+        </div>
+        <br>
+    </div>
+    <div id="p2">
+        <div id="project2">
+            <h3 id="p2Name">Quick Quiz</h3>
+            <video  controls>
+                <source src="QuizApp.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+        </div>
+        <div id="project2LikeDislike">
+            <span id="likeP2">0</span><i onclick="handleLikesP2(this)" class="fa fa-thumbs-up"></i>
+            <span id="dislikeP2">0</span><i  onclick="handleDisLikesP2(this)" class="fa fa-thumbs-down"></i>
+        </div>
+    </div>
+    <script>
+        var likeP1=document.getElementById("likeP1");
+        var dislikeP1=document.getElementById("dislikeP1");
+
+        var likeP2=document.getElementById("likeP2");
+        var dislikeP2=document.getElementById("dislikeP2");
+
+        function handleLikesP1(){
+            likeP1.innerText=parseInt(likeP1.innerText)+1;
+            var likeP1Val=likeP1.innerText;
+            localStorage.setItem("likesForP1",likeP1.innerText);
+        }
+
+        function handleDisLikesP1(){
+            dislikeP1.innerText=parseInt(dislikeP1.innerText)+1;
+            var dislikeP1Val=dislikeP1.innerText;
+            localStorage.setItem("disLikesForP1",dislikeP1.innerText);
+        }
+
+        function handleLikesP2(){
+            console.log("likeP2 is:",likeP2);
+            likeP2.innerText=parseInt(likeP2.innerText)+1;
+            localStorage.setItem("likesForP2",likeP2.innerText);
+        }
+
+        function handleDisLikesP2(){
+            dislikeP2.innerText=parseInt(dislikeP2.innerText)+1;
+            localStorage.setItem("disLikesForP2",dislikeP2.innerText);
+        }
+        const likesForP1=localStorage.getItem("likesForP1");
+        const disLikesForP1=localStorage.getItem("disLikesForP1");
+
+        const likesForP2=localStorage.getItem("likesForP2");
+        const disLikesForP2=localStorage.getItem("disLikesForP2");
+
+        likeP1.innerText=likesForP1;
+        dislikeP1.innerText=disLikesForP1;
+
+        likeP2.innerText=likesForP2;
+        dislikeP2.innerText=disLikesForP2;
+
+        // const likesForP1 = JSON.parse(localStorage.getItem("likesForP1")) || [];
+        // const disLikesForP1 = JSON.parse(localStorage.getItem("disLikesForP1")) || [];
+
+        // likeP1.innerText = likesForP1
+        //     .map(score => {
+        //         return score;
+        //     });
+    </script>
+</body>
+</html>
